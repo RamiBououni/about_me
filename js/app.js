@@ -39,7 +39,7 @@ if(team === 'no' || team === 'n'){
   alert('Wrong answer!');
 }
 
-var goldQuestion = prompt('Do I have 2 brothers?');
+var goldQuestion = prompt('You can get 3 times the score if you answer this question right:\nDo I have 2 brothers?').toLowerCase();
 console.log('How many brothers do I have? is it 2?');
 if(goldQuestion == 'yes' || goldQuestion == 'y'){
   alert('You must be one of my friends. I have 2 brothers.');
