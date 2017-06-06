@@ -1,9 +1,14 @@
+body{
+  background-image: url('https://d3cbihxaqsuq0s.cloudfront.net/images/42729399_xl.jpg');
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
 h1{
   background-color: yellow;
   color: black;
 }
 p{
-  color: blue;
   font-size: 22px;
 }
 section{
