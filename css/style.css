@@ -1,0 +1,14 @@
+h1{
+  background-color: yellow;
+  color: black;
+}
+p{
+  color: blue;
+  font-size: 22px;
+}
+section{
+  height: 300px;
+  width: 900px;
+  margin: auto;
+  padding: 200px 0;
+}
