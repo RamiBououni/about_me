@@ -66,20 +66,20 @@ if (guess === 4) {
   score += 40;
   correctQuestions++;
 } else {
-  while (numbersOfTries <= 4) {
+  while (numbersOfTries <= 3) {
     if (guess > 4) {
       alert('Your guess is too high! Try again!');
-      numbersOfTries++;
       guess = prompt('How many time has Germany won the World cup? Guess a number!');
+      numbersOfTries++;
     } else if (guess < 4) {
       alert('Your guess is too low! Try again!');
-      numbersOfTries++;
       guess = prompt('How many time has Germany won the World cup? Guess a number!');
+      numbersOfTries++;
     } else {
       alert('You got it right: Germany won the world cup 4 times, you got 40 more points!');
       score += 40;
       correctQuestions++;
-      break;
+      numbersOfTries = 3;
     }
   }
 }
