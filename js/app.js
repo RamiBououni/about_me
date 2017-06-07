@@ -51,22 +51,34 @@ if(goldQuestion == 'yes' || goldQuestion == 'y'){
 // 6Th question:
 // As a developer, I want to add a sixth question to my guessing game that takes numeric input by prompting a user to guess a number (for instance, "What is my favorite number?" or "How many Pokémon did I catch yesterday?"), and indicates to the user whether the guess is 'too high' or 'too low', and gives the user exactly four opportunities to get the correct answer, so that my fancy programming skills are showcased.
 
-var guess = prompt('How many time has Germany won the World cup? Guess a number!');
+var guess = prompt('I love soccer, so I\'m going to ask you a related question to my favorite sport:\nHow many time has Germany won the World cup? Guess a number!');
 //Germany won 4 times the world cup
-var numbersOfTries;
+var numbersOfTries = 1;
 
-while(numbersOfTries <= 4){
-  if(guess >= 5) {
-    alert('Your guess is too high! Try again');
-    numbersOfTries++;
-  }else if(guess < 4){
-    alert('Your guess is too low! Try again');
-    numbersOfTries++;
-  }else{
-    alert('You got it right: Germany won the world cup 4 times, you got 40 more points!');
-    score += 40;
+if(guess === 4){
+  alert('You got it right: Germany won the world cup 4 times, you got 40 more points!');
+  score += 40;
+}else{
+  while(numbersOfTries < 4){
+    console.log('current number of tries: ' + numbersOfTries);
+    if(guess > 4) {
+      alert('Your guess is too high! Try again!');
+      numbersOfTries++;
+      console.log(numbersOfTries);
+      guess = prompt('How many time has Germany won the World cup? Guess a number!');
+    }else if(guess < 4){
+      alert('Your guess is too low! Try again!');
+      numbersOfTries++;
+      console.log(numbersOfTries);
+      guess = prompt('How many time has Germany won the World cup? Guess a number!');
+    }else{
+      alert('You got it right: Germany won the world cup 4 times, you got 40 more points!');
+      score += 40;
+      break;
+    }
   }
 }
+
 
 
 
