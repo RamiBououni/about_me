@@ -48,6 +48,29 @@ if(goldQuestion == 'yes' || goldQuestion == 'y'){
   alert('Sorry, try again!');
 }
 
+// 6Th question:
+// As a developer, I want to add a sixth question to my guessing game that takes numeric input by prompting a user to guess a number (for instance, "What is my favorite number?" or "How many Pokémon did I catch yesterday?"), and indicates to the user whether the guess is 'too high' or 'too low', and gives the user exactly four opportunities to get the correct answer, so that my fancy programming skills are showcased.
+
+var guess = prompt('How many time has Germany won the World cup? Guess a number!');
+//Germany won 4 times the world cup
+var numbersOfTries;
+
+while(numbersOfTries <= 4){
+  if(guess >= 5) {
+    alert('Your guess is too high! Try again');
+    numbersOfTries++;
+  }else if(guess < 4){
+    alert('Your guess is too low! Try again');
+    numbersOfTries++;
+  }else{
+    alert('You got it right: Germany won the world cup 4 times, you got 40 more points!');
+    score += 40;
+  }
+}
+
+
+
+
 alert('Thank you for taking the time to play this game with me!');
 
 var choice = confirm('Do you want to know your score?');

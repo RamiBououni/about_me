@@ -1,19 +1,37 @@
-body{
+body {
   background-image: url('https://d3cbihxaqsuq0s.cloudfront.net/images/42729399_xl.jpg');
   background-position: top;
   background-repeat: no-repeat;
 }
 
-h1{
+h1 {
   background-color: yellow;
   color: black;
+  text-align: center;
 }
-p{
+
+p {
   font-size: 22px;
+  padding-top: 20px;
 }
-section{
+
+section {
   height: 300px;
   width: 900px;
   margin: auto;
-  padding: 200px 0;
+  padding-bottom: : 50px;
+}
+
+ol, ul {
+  font-size: 18px;
+}
+
+.rules {
+  padding-top: 50px;
+}
+
+.movies{
+  position: relative;
+  padding-left: 900px;
+
 }
