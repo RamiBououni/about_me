@@ -70,14 +70,12 @@ function fifthQuestion () {
   } else {
     alert('Sorry, try again!');
   }
-
 }
-
 
 // 6Th question:
 // As a developer, I want to add a sixth question to my guessing game that takes numeric input by prompting a user to guess a number (for instance, "What is my favorite number?" or "How many Pokémon did I catch yesterday?"), and indicates to the user whether the guess is 'too high' or 'too low', and gives the user exactly four opportunities to get the correct answer, so that my fancy programming skills are showcased.
 
-var guess = prompt('I love soccer, so I\'m going to ask you about my favorite sport:\nHow many time has Germany won the World cup? Guess a number! \n\nOnly 4 trials allowed').parseInt();
+var guess = parseInt(prompt('I love soccer, so I\'m going to ask you about my favorite sport:\nHow many time has Germany won the World cup? Guess a number! \n\nOnly 4 trials allowed'));
 //Germany won 4 times the world cup
 var numbersOfTries = 1;
 sixthQuestion();
@@ -90,50 +88,49 @@ function sixthQuestion() {
     while (numbersOfTries <= 3) {
       if (guess > 4) {
         alert('Your guess is too high! Try again!');
-        guess = prompt('How many time has Germany won the World cup? Guess a number!').parseInt();
+        guess = parseInt(prompt('How many time has Germany won the World cup? Guess a number!'));
         numbersOfTries++;
       } else if (guess < 4) {
         alert('Your guess is too low! Try again!');
-        guess = prompt('How many time has Germany won the World cup? Guess a number!').parseInt();
+        guess = parseInt(prompt('How many time has Germany won the World cup? Guess a number!'));
         numbersOfTries++;
       } else {
-        alert('You got it right: Germany won the world cup 4 times, you got 40 more points!').parseInt();
+        alert('You got it right: Germany won the world cup 4 times, you got 40 more points!');
         score += 40;
         correctQuestions++;
         numbersOfTries = 3; //cant use break; to break out of the while loop so I had to set up numbers of tries to 3 to break out of the while loop
       }
     }
   }
-
-
 }
 
 
 // Question 7:
 // As a developer, I want to add a seventh question to my guessing game that has multiple possible correct answers that are stored in an array. For instance, "Can you guess a state that I have lived in besides Washington?", so that even more of my programming skills are showcased. For now, I will structure this question so that the user has six tries to get a single correct answer, and upon using up those tries OR getting a correct answer, displays a message to the user indicating all of the possible correct answers.
 
-var correctAnswers = ['France', 'Italy', 'Oman'];
+var correctAnswers = ['france', 'italy', 'oman'];
 
-var guessedAnswer = prompt('Can you guess which countries I visited? You have 6 tries to get a single correct answer');
+var guessedAnswer = prompt('Can you guess which countries I visited? You have 6 tries to get a single correct answer').toLowerCase();
 //Germany won 4 times the world cup
+var countriesTrials = 0;
 
-var countriesTrials = 1;
 seventhQuestion();
-function seventhQuestion() {
-  while (countriesTrials <= 6) {
 
-    if (guessedAnswer == correctAnswers[0] || guessedAnswer == correctAnswers[1] || guessedAnswer == correctAnswers[2] || guessedAnswer == correctAnswers[3]) {
-      alert('Good job! Here are the countries I visited' + correctAnswers);
+function seventhQuestion() {
+  var correct = false;
+  while (countriesTrials < 6 && !correct) {
+
+    if (guessedAnswer === correctAnswers[0] || guessedAnswer === correctAnswers[1] || guessedAnswer === correctAnswers[2]) {
+      alert('Good job! Here are the countries I visited:\n ' + correctAnswers);
       score += 10;
       correctQuestions++;
-      countriesTrial = 7;
+      correct = true;
     } else {
       alert('Try again!');
       guessedAnswer = prompt('Can you guess which countries I visited?');
       countriesTrials++;
     }
   }
-
 }
 
 
