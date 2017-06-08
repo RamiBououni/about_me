@@ -58,11 +58,9 @@ if (goldQuestion == 'yes' || goldQuestion == 'y') {
 // 6Th question:
 // As a developer, I want to add a sixth question to my guessing game that takes numeric input by prompting a user to guess a number (for instance, "What is my favorite number?" or "How many Pokémon did I catch yesterday?"), and indicates to the user whether the guess is 'too high' or 'too low', and gives the user exactly four opportunities to get the correct answer, so that my fancy programming skills are showcased.
 
-var guess = prompt('I love soccer, so I\'m going to ask you about my favorite sport:\nHow many time has Germany won the World cup? Guess a number! \n\nOnly 4 trials allowed');
+var guess = prompt('I love soccer, so I\'m going to ask you about my favorite sport:\nHow many time has Germany won the World cup? Guess a number! \n\nOnly 4 trials allowed').parseInt();
 //Germany won 4 times the world cup
 var numbersOfTries = 1;
-
-
 
 if (guess === 4) {
   alert('You got it right: Germany won the world cup 4 times, you got 40 more points!');
@@ -72,17 +70,17 @@ if (guess === 4) {
   while (numbersOfTries <= 3) {
     if (guess > 4) {
       alert('Your guess is too high! Try again!');
-      guess = prompt('How many time has Germany won the World cup? Guess a number!');
+      guess = prompt('How many time has Germany won the World cup? Guess a number!').parseInt();
       numbersOfTries++;
     } else if (guess < 4) {
       alert('Your guess is too low! Try again!');
-      guess = prompt('How many time has Germany won the World cup? Guess a number!');
+      guess = prompt('How many time has Germany won the World cup? Guess a number!').parseInt();
       numbersOfTries++;
     } else {
-      alert('You got it right: Germany won the world cup 4 times, you got 40 more points!');
+      alert('You got it right: Germany won the world cup 4 times, you got 40 more points!').parseInt();
       score += 40;
       correctQuestions++;
-      numbersOfTries = 3;
+      numbersOfTries = 3; //cant use break; to break out of the while loop so I had to set up numbers of tries to 3 to break out of the while loop
     }
   }
 }
