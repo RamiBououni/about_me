@@ -5,7 +5,7 @@ var correctQuestions = 0;
 
 var guest = prompt('Welcome to my guessing game! What is your name?');
 
-var firstName = prompt('Is my name: Rami?').toLowerCase();
+var firstName = prompt('Hello ' + guest + '!\nFirst question: Is my name: Rami?').toLowerCase();
 console.log('Guess my first name, is it Rami?');
 if (firstName === 'yes' || firstName === 'y') {
   alert('Great job, my name is Rami.');
