@@ -87,9 +87,41 @@ if (guess === 4) {
 // Question 7:
 // As a developer, I want to add a seventh question to my guessing game that has multiple possible correct answers that are stored in an array. For instance, "Can you guess a state that I have lived in besides Washington?", so that even more of my programming skills are showcased. For now, I will structure this question so that the user has six tries to get a single correct answer, and upon using up those tries OR getting a correct answer, displays a message to the user indicating all of the possible correct answers.
 
+var correctAnswers = ['France', 'Italy', 'Oman'];
 
+var guessedAnswer = prompt('Can you guess which countries I visited? You have 6 tries to get a single correct answer');
+//Germany won 4 times the world cup
 
+var countriesTrials = 1;
+
+while (countriesTrials <= 6) {
+
+  for (var i; i < correctAnswers.length; i++) {
+
+    if (guessedAnswer == correctAnswers[i]) {
+      alert('Good job! Here are the countries I visited' + correctAnswers);
+      countriesTrial = 7;
+    } else {
+      alert('Try again!');
+      guessedAnswer = prompt('Can you guess which countries I visited?');
+      countriesTrials++;
+    }
+  }
+}
+
+//   while (visitedPlaces != correctAnswers[i]) {
+//
+//     for (var i = 0; i < correctAnswers.length; i++) {
+//       if (visitedPlaces == correctAnswers[i]) {
+//         alert('Good job! Here are the countries I visited' + visitedPlaces);
+//         countriesTrials = 7;
+//       }
+//     }
+//     countriesVisitedTrials++;
+//   }
+// }
 
 alert('Thank you for taking the time to play this game with me! Next is your score!');
 
+//keeping score and number of correct questions.
 alert('Good job ' + userName + ' Your score is: ' + score + ' and you got ' + correctQuestions + ' out of 7 questions correct');
