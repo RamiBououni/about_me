@@ -2,5 +2,5 @@
 
 # Pair programming
 
-* Navigator: Rami Bououni
-* Driver: Quinn Liu
+* The navigator: Rami Bououni.
+* The driver: Quinn Liu.
